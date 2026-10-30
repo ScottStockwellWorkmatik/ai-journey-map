@@ -12,14 +12,14 @@ og-image.png          2400 x 1260 link-preview image (the same size and 2:1 rati
 css/styles.css        Workmatik brand tokens and layout (journey styles at the end)
 js/app.js             Builds the map from the data file and draws the dependency arrows
 data/journey.json     All content: phases, flows, 35 activities, dependencies
-assets/               Put logo-white.svg and logo-black.svg here (see below)
+assets/               Logo files (see below)
 favicon.*, apple-touch-icon.png, web-app-manifest-*.png, site.webmanifest   Icon set
 .nojekyll             Tells GitHub Pages to serve the files as they are
 ```
 
 ## Logo
 
-The header looks for `assets/logo-white.svg` (screen) and `assets/logo-black.svg` (print). If a file is missing, the page shows a text wordmark instead, so nothing breaks. Add the two SVG files to `assets/` to use the logo.
+The header uses `assets/logo-black.svg` (it sits on the orange header, as on the AI Skills Assessment). `assets/logo-white.svg` is included for use on dark backgrounds. If the black file is missing, the page shows a text wordmark instead, so nothing breaks. 
 
 ## Changing the content
 

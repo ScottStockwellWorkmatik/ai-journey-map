@@ -9,10 +9,10 @@
   function el(tag, cls, html) { var e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; }
 
   // Logo files are optional: fall back to a text wordmark if they are not in /assets.
-  ['logoScreen', 'logoPrint'].forEach(function (id) {
+  ['logoScreen'].forEach(function (id) {
     var img = $(id); if (!img) return;
     function swap() {
-      var w = el('p', 'logo wordmark ' + (id === 'logoScreen' ? 'logo-screen' : 'logo-print'), 'Workmatik');
+      var w = el('p', 'logo wordmark', 'Workmatik');
       if (img.parentNode) img.parentNode.replaceChild(w, img);
     }
     if (img.complete && img.naturalWidth === 0) swap(); else img.addEventListener('error', swap);
