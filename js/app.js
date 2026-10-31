@@ -29,12 +29,14 @@
 
   function build() {
     $('mapVersion').textContent = D.meta.version + ', ' + D.meta.date;
-    // key
-    var key = $('key');
-    Object.keys(D.categories).forEach(function (k) {
-      key.appendChild(el('li', '', '<span class="id badge">' + k + '</span>' + esc(D.categories[k])));
+    // key, repeated under each flow's title
+    ['L', 'M'].forEach(function (lane) {
+      var key = $('key-' + lane);
+      Object.keys(D.categories).forEach(function (k) {
+        key.appendChild(el('li', '', '<span class="id badge">' + k + '</span>' + esc(D.categories[k])));
+      });
+      key.appendChild(el('li', '', '<span class="id badge">&#9733;</span>Proposed critical'));
     });
-    key.appendChild(el('li', '', '<span class="id badge">&#9733;</span>Proposed critical'));
     D.nodes.forEach(function (n) { byId[n.id] = n; unlocks[n.id] = []; });
     D.nodes.forEach(function (n) { n.needs.forEach(function (m) { unlocks[m].push(n.id); }); });
 

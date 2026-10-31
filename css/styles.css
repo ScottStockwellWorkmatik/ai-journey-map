@@ -162,7 +162,7 @@ td.flag { color: #7A1010; font-weight: 700; }
   .tabs, .actions, .dropzone, .rollup-controls, .skip { display: none !important; } [role="tabpanel"] { display: block !important; } }
 .verified-note { margin: 6px 0 0; }
 /* ---- Journey map (added for the Marketing AI Journey Map) ---- */
-:root { --up: #C8431A; --down: #1F7CAD; --edge: #8A949C; }
+:root { --up: #D93A55; --down: #1FA37A; --edge: #8A949C; }
 .wrap { max-width: 1180px; }
 .steps { margin: 6px 0 0; }
 .toolbar { display: flex; gap: 10px 24px; flex-wrap: wrap; align-items: center; justify-content: space-between; margin: 0 0 14px; }
@@ -195,8 +195,8 @@ path.e-all { stroke: var(--edge); stroke-width: 1.2; opacity: .65; }
 .node.crit { border: 3px solid var(--ink); padding: 5.5px 7.5px 6.5px; }
 .node.crit .id::before { content: "\2605  "; }
 .node.sel { background: var(--white); box-shadow: 0 0 0 3px var(--navy); }
-.node.up { border-color: var(--up); background: #FFF3EC; }
-.node.down { border-color: var(--down); background: #E6F5FF; }
+.node.up, #flow-M .node.up { border-color: var(--up); background: #FDECEF; }
+.node.down, #flow-M .node.down { border-color: var(--down); background: #E4F6EF; }
 .node.up:not(.crit), .node.down:not(.crit) { border-width: 2.5px; padding: 6px 8px 7px; }
 .has-sel .node:not(.sel):not(.up):not(.down) { background: var(--white); border-color: var(--line); }
 .has-sel .node:not(.sel):not(.up):not(.down) > * { opacity: .4; }
@@ -220,3 +220,17 @@ path.e-all { stroke: var(--edge); stroke-width: 1.2; opacity: .65; }
   .node { break-inside: avoid; }
   .wordmark { color: var(--ink); }
 }
+
+/* Marketer flow in brand orange; leader flow stays blue */
+.edgekey .swatch { display: inline-block; width: 22px; height: 3px; border-radius: 2px; }
+.flowkey { margin: 0 0 12px; }
+#flow-M .ph { background: var(--orange); color: var(--ink); }
+#flow-M .ph span { color: #3A1A0A; }
+#flow-M .node { background: #FFE9DE; border-color: var(--orange); }
+#flow-M .node:hover { background: #FFD9C6; }
+#flow-M .node .id { background: var(--orange); color: var(--ink); }
+#flow-M .node.crit { border-color: var(--ink); }
+#flow-M .node.sel { background: var(--white); box-shadow: 0 0 0 3px var(--orange); }
+.has-sel #flow-M .node:not(.sel):not(.up):not(.down) { background: var(--white); border-color: var(--line); }
+#key-M .badge { background: #FFE9DE; color: #7A2A0A; border: 1px solid var(--orange); }
+#key-L .badge { background: var(--pale); color: var(--navy); border: 1px solid var(--blue); }

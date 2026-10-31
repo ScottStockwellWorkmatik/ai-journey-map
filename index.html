@@ -39,7 +39,7 @@
   <div class="info-box">
     <strong>How to use this map.</strong>
     <ol class="steps">
-      <li>Pick an activity in either flow. Orange shows what it <em>needs first</em>, blue shows what it <em>unlocks</em>.</li>
+      <li>Pick an activity in either flow. Red shows what it <em>needs first</em>, green shows what it <em>unlocks</em>. Leader activities are blue, marketer activities are orange.</li>
       <li>Read the panel at the foot of the screen for the full activity, what &ldquo;done&rdquo; looks like and the linked activities. Select a linked activity to follow the chain.</li>
       <li>Bold IDs in a box&rsquo;s &ldquo;Needs first&rdquo; line belong to the other flow, so they mark handovers between leader and marketer.</li>
     </ol>
@@ -48,7 +48,7 @@
   <div id="loadError" class="error" role="alert" hidden></div>
 
   <div class="toolbar">
-    <ul class="keyline" id="key" aria-label="Key"></ul>
+    <ul class="keyline edgekey" aria-label="Connection key"><li><span class="swatch" style="background:#D93A55"></span>Needs first</li><li><span class="swatch" style="background:#1FA37A"></span>Unlocks</li><li><span class="swatch" style="background:#8A949C"></span>All dependencies</li></ul>
     <label class="check"><input type="checkbox" id="showAll"> Show all dependencies</label>
   </div>
 
@@ -56,14 +56,14 @@
     <div class="stage" id="stage">
       <svg class="edges" id="edges" aria-hidden="true">
         <defs>
-          <marker id="m-up" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#C8431A"/></marker>
-          <marker id="m-down" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1F7CAD"/></marker>
+          <marker id="m-up" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#D93A55"/></marker>
+          <marker id="m-down" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1FA37A"/></marker>
           <marker id="m-all" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8A949C"/></marker>
         </defs>
         <g id="edgeLayer"></g>
       </svg>
-      <section class="flow" id="flow-L" aria-labelledby="h-L"><h2 id="h-L"></h2><p class="flow-sub" id="s-L"></p><div class="grid" id="g-L"></div></section>
-      <section class="flow" id="flow-M" aria-labelledby="h-M"><h2 id="h-M"></h2><p class="flow-sub" id="s-M"></p><div class="grid" id="g-M"></div></section>
+      <section class="flow" id="flow-L" aria-labelledby="h-L"><h2 id="h-L"></h2><p class="flow-sub" id="s-L"></p><ul class="keyline flowkey" id="key-L" aria-label="Key"></ul><div class="grid" id="g-L"></div></section>
+      <section class="flow" id="flow-M" aria-labelledby="h-M"><h2 id="h-M"></h2><p class="flow-sub" id="s-M"></p><ul class="keyline flowkey" id="key-M" aria-label="Key"></ul><div class="grid" id="g-M"></div></section>
     </div>
   </div>
 
