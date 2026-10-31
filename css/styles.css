@@ -234,3 +234,4 @@ path.e-all { stroke: var(--edge); stroke-width: 1.2; opacity: .65; }
 .has-sel #flow-M .node:not(.sel):not(.up):not(.down) { background: var(--white); border-color: var(--line); }
 #key-M .badge { background: #FFE9DE; color: #7A2A0A; border: 1px solid var(--orange); }
 #key-L .badge { background: var(--pale); color: var(--navy); border: 1px solid var(--blue); }
+#flow-M h2 { color: var(--orange); }
