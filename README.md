@@ -2,7 +2,7 @@
 
 A browser-only web page by Workmatik. It shows the 35 activities of the AI readiness framework for marketing as two flows, one for the marketing leader and one for the marketer, across five phases. Selecting an activity highlights what must come first and what it unlocks.
 
-Live site (once GitHub Pages is on): https://scottstockwellworkmatik.github.io/marketing-ai-journey-map/
+Live site (once GitHub Pages is on): https://scottstockwellworkmatik.github.io/ai-journey-map/
 
 ## Files
 
@@ -27,7 +27,7 @@ Edit `data/journey.json`. Each activity has an `id`, `lane` (`L` leader or `M` m
 
 ## Publishing on GitHub Pages
 
-1. Create the repository `marketing-ai-journey-map` under the `ScottStockwellWorkmatik` account (public).
+1. Create the repository `ai-journey-map` under the `ScottStockwellWorkmatik` account (public).
 2. Upload the contents of this folder, not the folder itself, so `index.html` sits at the top level.
 3. Settings, Pages, Source: Deploy from a branch, branch `main`, folder `/ (root)`, then Save.
 4. The `og:url` and `og:image` tags in `index.html` assume that repository name. Change both if you use a different name, because link previews need absolute URLs.
